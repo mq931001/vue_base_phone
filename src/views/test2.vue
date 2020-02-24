@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="test2">
+    <h1>测试第二个页面</h1>
   </div>
 </template>
 <style lang="scss">
