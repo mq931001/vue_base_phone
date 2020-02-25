@@ -8,6 +8,7 @@
     "build:test": "vue-cli-service build --mode testing"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "core-js": "^3.6.4",
     "normalize.css": "^8.0.1",
     "vant": "^2.5.1",

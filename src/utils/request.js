@@ -1,5 +1,5 @@
 import axios from 'axios'
-
+console.log(axios)
 const service = axios.create({
     baseURl: process.env.VUE_APP_BASE_API,
     timeout: 30000,

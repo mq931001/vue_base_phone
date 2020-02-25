@@ -1,6 +1,6 @@
 <template>
   <div>
-      <van-tabbar route safe-area-inset-bottom>
+      <van-tabbar route safe-area-inset-bottom >
         <van-tabbar-item :to="item.to" v-for="(item,index) in tabData" :key="index" >{{item.name}}</van-tabbar-item>
       </van-tabbar>
   </div>
@@ -25,4 +25,9 @@ export default {
   }
 }
 </script>
+<style lang="scss" scope>
 
+
+
+  
+</style>

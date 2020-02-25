@@ -1,5 +1,9 @@
 # vue_base_phone
-
+  一个移动端h5脚手架 vue + vuecli4 + vant + vw适配
+  封装 axios 请求 
+  dev 开发环境
+  prod 生成环境
+  testing 测试环境
 ## Project setup
 ```
 npm install
@@ -14,6 +18,7 @@ npm run serve
 ```
 npm run build
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Compiles and minifies for testing
+```
+npm run build:testing
+```

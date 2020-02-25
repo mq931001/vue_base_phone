@@ -16,7 +16,7 @@ module.exports = {
                 target: 'http://192.168.106.88:86', // 需要跨域的地址
                 changeOrigin: true,                 // 是否开启跨域
                 pathRewrite: {
-                    ['^' + process.env.VUE_APP_BASE_API]: ''  // 实际的接口是否有VUE_APP_BASE_API变量名字的字符
+                    ['^' + process.env.VUE_APP_BASE_API]: 'api'  // 实际的接口是否有VUE_APP_BASE_API变量名字的字符
                   } 
             }
         }

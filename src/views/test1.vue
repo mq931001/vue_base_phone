@@ -1,9 +1,11 @@
 <template>
   <div class="test2">
     <h1>测试第一个页面。哈哈哈</h1>
+    <div class="box"></div>
   </div>
 </template>
 <script>
+import { login } from '@/api/index'
 export default {
   name: 'Test1',
   components:{ },
@@ -19,7 +21,7 @@ export default {
   watch: {},
   beforeCreate (){}, // 实例刚在内存中被创建出来，此时，还没有初始化好 data 和 methods 属性 
                      // loading事件
-  created (){},      // 实例已经在内存中创建，此时 data 和 methods 已经创建OK，此时还没有开始 编译模板 dom还未生成
+  created (){this.run()},      // 实例已经在内存中创建，此时 data 和 methods 已经创建OK，此时还没有开始 编译模板 dom还未生成
                     // 在这结束loading，还做一些初始化，实现函数自执行
   beforeMount (){}, // 此时已经完成了模板的编译，但是还没有挂载到页面中 此时有了虚拟DOM。
   mounted (){},     // 已经将编译好的模板，挂载到了页面指定的容器中显示 渲染为真实DOM。
@@ -32,7 +34,10 @@ export default {
                         // 你确认删除XX吗？ destroyed ：当前组件已被删除，清空相关内容
   destroyed() { },      // 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。 
   methods: {
-    run () {}
+    async run () {
+      let res = await login()
+      console.log(res)
+    }
   }
 }
 </script>
@@ -40,5 +45,10 @@ export default {
   h1{
     font-size: 2px;
     display: flex;
+  }
+  .box{
+    width: 100px;
+    height: 100px;
+    background-color: red;
   }
 </style>
