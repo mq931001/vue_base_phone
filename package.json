@@ -5,12 +5,17 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build:test": "vue-cli-service build --mode testing"
+    "build:test": "vue-cli-service build --mode testing",
+    "deploy": "node ./deploy/deploy.js"
   },
   "dependencies": {
+    "archiver": "^4.0.1",
     "axios": "^0.19.2",
     "core-js": "^3.6.4",
+    "inquirer": "^7.2.0",
+    "node-ssh": "^10.0.2",
     "normalize.css": "^8.0.1",
+    "ora": "^4.0.4",
     "vant": "^2.5.1",
     "vue": "^2.6.11",
     "vue-router": "^3.1.5"
